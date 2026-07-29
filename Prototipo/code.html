@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexus Tech Agency - Software de Vanguardia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Space+Mono:wght@400;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "lime": "#d4ff00",
+                        "charcoal": "#121212",
+                        "charcoal-light": "#1e1e1e",
+                        
+                        "on-secondary-fixed": "#001f25",
+                        "on-secondary": "#00363e",
+                        "surface-dim": "#121212",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#1e1e1e",
+                        "primary-fixed-dim": "#d4ff00",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#d4ff00",
+                        "primary": "#d4ff00",
+                        "outline-variant": "#333333",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#121212",
+                        "background": "#121212",
+                        "secondary-container": "#1e1e1e",
+                        "outline": "#d4ff00",
+                        "tertiary-fixed-dim": "#ffffff",
+                        "on-tertiary": "#121212",
+                        "on-surface": "#ffffff",
+                        "surface-bright": "#1e1e1e",
+                        "tertiary": "#ffffff",
+                        "primary-fixed": "#d4ff00",
+                        "surface-container": "#121212",
+                        "inverse-primary": "#121212",
+                        "surface-container-highest": "#333333",
+                        "tertiary-container": "#1e1e1e",
+                        "on-primary-container": "#ffffff",
+                        "on-secondary-fixed-variant": "#121212",
+                        "surface-container-high": "#1e1e1e",
+                        "on-tertiary-fixed": "#121212",
+                        "on-tertiary-container": "#ffffff",
+                        "on-tertiary-fixed-variant": "#ffffff",
+                        "surface-tint": "#d4ff00",
+                        "surface": "#121212",
+                        "surface-container-lowest": "#121212",
+                        "on-background": "#ffffff",
+                        "on-primary-fixed": "#121212",
+                        "primary-container": "#d4ff00",
+                        "secondary-fixed-dim": "#d4ff00",
+                        "on-primary": "#121212",
+                        "on-primary-fixed-variant": "#121212",
+                        "on-surface-variant": "#cccccc",
+                        "secondary": "#d4ff00",
+                        "tertiary-fixed": "#ffffff",
+                        "inverse-surface": "#ffffff",
+                        "on-secondary-container": "#d4ff00",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#121212"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Space Mono", "monospace"],
+                        "headline-lg-mobile": ["Archivo Black", "sans-serif"],
+                        "headline-lg": ["Archivo Black", "sans-serif"],
+                        "headline-md": ["Archivo Black", "sans-serif"],
+                        "body-lg": ["Space Mono", "monospace"],
+                        "headline-xl-mobile": ["Archivo Black", "sans-serif"],
+                        "headline-xl": ["Archivo Black", "sans-serif"],
+                        "label-sm": ["Space Mono", "monospace"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "1", "fontWeight": "900" }],
+                        "headline-lg": ["56px", { "lineHeight": "1", "fontWeight": "900" }],
+                        "headline-md": ["28px", { "lineHeight": "1.1", "fontWeight": "900" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["48px", { "lineHeight": "1", "letterSpacing": "-0.05em", "fontWeight": "900" }],
+                        "headline-xl": ["80px", { "lineHeight": "0.9", "letterSpacing": "-0.05em", "fontWeight": "900" }],
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "700", "textTransform": "uppercase" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .brutal-border {
+            border: 4px solid #ffffff;
+            box-shadow: 8px 8px 0px #d4ff00;
+        }
+        .brutal-border-lime {
+            border: 4px solid #d4ff00;
+            box-shadow: 8px 8px 0px #ffffff;
+        }
+        .btn-brutal {
+            background-color: #d4ff00;
+            color: #121212;
+            border: 4px solid #121212;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.1s ease;
+        }
+        .btn-brutal:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0px #ffffff;
+        }
+        .btn-brutal-alt {
+            background-color: #121212;
+            color: #ffffff;
+            border: 4px solid #ffffff;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.1s ease;
+        }
+        .btn-brutal-alt:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0px #d4ff00;
+            border-color: #d4ff00;
+            color: #d4ff00;
+        }
+        .text-outline {
+            -webkit-text-stroke: 2px #d4ff00;
+            color: transparent;
+        }
+        .glitch-bg {
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(212, 255, 0, 0.1) 2px,
+                    rgba(212, 255, 0, 0.1) 4px
+                );
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #d4ff00;
+            color: #121212;
+            padding: 10px 0;
+            border-top: 4px solid #ffffff;
+            border-bottom: 4px solid #ffffff;
+        }
+        .marquee span {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+            font-family: 'Space Mono', monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-charcoal text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-lime selection:text-charcoal glitch-bg">
+<!-- TopNavBar (Shared Component) -->
+<nav class="w-full top-0 sticky bg-charcoal border-b-4 border-white z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-lime tracking-tighter uppercase">NEXUS//TECH</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-white hover:text-lime hover:bg-white hover:text-charcoal px-2 py-1 transition-colors text-label-sm font-label-sm uppercase" href="#servicios">[ SERVICIOS ]</a>
+<a class="text-white hover:text-lime hover:bg-white hover:text-charcoal px-2 py-1 transition-colors text-label-sm font-label-sm uppercase" href="#proyectos">[ PROYECTOS ]</a>
+<a class="text-white hover:text-lime hover:bg-white hover:text-charcoal px-2 py-1 transition-colors text-label-sm font-label-sm uppercase" href="#nosotros">[ NOSOTROS ]</a>
+</div>
+<a class="btn-brutal font-label-sm text-label-sm px-6 py-2" href="#contacto">CONTACTO_</a>
+</div>
+</nav>
+<main class="flex-grow flex flex-col relative overflow-hidden">
+<!-- Hero Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop pt-16 pb-32 max-w-container-max mx-auto relative">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+<div class="lg:col-span-8 flex flex-col gap-8 z-20 mix-blend-difference">
+<div class="inline-flex items-center gap-2 px-4 py-2 border-2 border-lime w-fit bg-charcoal">
+<span class="w-3 h-3 bg-lime animate-ping"></span>
+<span class="font-label-sm text-label-sm text-lime uppercase tracking-widest">&gt;&gt; SYS.READY // INNOVATION_VANGUARD</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-white uppercase">
+                        TRANSFORMAMOS TUS IDEAS EN <br/>
+<span class="text-lime bg-charcoal px-2">SOFTWARE ESCALABLE</span> <br/>
+                        QUE IMPULSA TU CRECIMIENTO.
+                    </h1>
+<p class="font-body-lg text-body-lg text-white max-w-2xl border-l-4 border-lime pl-4 bg-charcoal/80 p-4">
+                        &gt; Soluciones a medida, chatbots inteligentes y automatización de procesos diseñados para maximizar tu eficiencia y ventas.
+                        <br/><br/>
+                        _Dejar de luchar contra la tecnología. Empieza a usarla a tu favor.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6 pt-8">
+<a class="btn-brutal font-body-md text-body-md px-8 py-4 text-center flex items-center justify-center gap-2 text-xl" href="#contacto">
+                            [ AGENDAR CONSULTORÍA GRATUITA ]
+                        </a>
+<a class="btn-brutal-alt font-body-md text-body-md px-8 py-4 text-center flex items-center justify-center gap-2 text-xl" href="#proyectos">
+                            VER CASOS DE ÉXITO -&gt;
+                        </a>
+</div>
+</div>
+<div class="lg:col-span-6 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 mt-12 lg:mt-0 z-0">
+<div class="relative brutal-border-lime w-full aspect-square bg-charcoal-light p-2 rotate-2 hover:rotate-0 transition-transform duration-300">
+<img alt="Cyber-brutalist high contrast abstract tech graphic with neon lime accents" class="w-full h-full object-cover grayscale contrast-150 mix-blend-luminosity hover:mix-blend-normal transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoaXo92kazrdTCrcX9uzsBZ1XBMgFUyGebm1DTAPg-romvFei0-2PNlP99j7PlvVyntcr98Y5WfQBeDZ6Yg99LGbOXYDVNjWczYnYn2l0YLoosGZqGoDdGYmRR6njxsmvGF8ghHIcVdn7cybJu0cL-TEN9IsR6jKskSTHK1rz2HMt0oEjf1tPHsastf8ZeLqsmfNmXR3LoYG0TF8WTTgepHn2JZO97QLL5yzDVl0NP4-VaqgMc3bwo"/>
+<!-- Tech Stack Badges -->
+<div class="absolute -bottom-4 -left-4 bg-charcoal border-4 border-white px-6 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-lime text-3xl">terminal</span>
+<span class="font-label-sm text-label-sm text-white">SYS.AUTOMATION</span>
+</div>
+<div class="absolute top-8 -right-4 bg-lime border-4 border-charcoal px-6 py-3 flex items-center gap-3 rotate-[-5deg]">
+<span class="material-symbols-outlined text-charcoal text-3xl">smart_toy</span>
+<span class="font-label-sm text-label-sm text-charcoal">AI_POWERED</span>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 left-0 -translate-y-1/2 -z-10 opacity-20 whitespace-nowrap pointer-events-none">
+<span class="font-headline-xl text-[200px] text-outline">NEXUS_TECH</span>
+</div>
+</section>
+<!-- Marquee Divider -->
+<div class="marquee">
+<span>
+                /// DESARROLLO A MEDIDA /// CHATBOTS INTELIGENTES /// LANDING PAGES ALTA CONVERSIÓN /// AUTOMATIZACIÓN DE FLUJOS /// ESCALABILIDAD GARANTIZADA /// INNOVACIÓN DE VANGUARDIA /// 
+                DESARROLLO A MEDIDA /// CHATBOTS INTELIGENTES /// LANDING PAGES ALTA CONVERSIÓN /// AUTOMATIZACIÓN DE FLUJOS /// ESCALABILIDAD GARANTIZADA /// INNOVACIÓN DE VANGUARDIA ///
+            </span>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-charcoal w-full border-t-8 border-lime relative z-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md text-lime uppercase">NEXUS//TECH</div>
+<p class="font-label-sm text-label-sm text-white/50 uppercase tracking-widest">&gt; 2024 NEXUS TECH AGENCY.<br/>&gt; INGENIERÍA Y DISEÑO DE VANGUARDIA.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-end">
+<a class="font-label-sm text-label-sm text-white hover:text-lime hover:bg-white hover:text-charcoal px-2 py-1 transition-colors uppercase" href="#">[ PRIVACIDAD ]</a>
+<a class="font-label-sm text-label-sm text-white hover:text-lime hover:bg-white hover:text-charcoal px-2 py-1 transition-colors uppercase" href="#">[ TÉRMINOS ]</a>
+<a class="font-label-sm text-label-sm text-white hover:text-lime hover:bg-white hover:text-charcoal px-2 py-1 transition-colors uppercase" href="#">[ LINKEDIN ]</a>
+<a class="font-label-sm text-label-sm text-white hover:text-lime hover:bg-white hover:text-charcoal px-2 py-1 transition-colors uppercase" href="#">[ GITHUB ]</a>
+</div>
+</div>
+</footer>
+</body></html>

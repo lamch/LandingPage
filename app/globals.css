@@ -1,26 +1,191 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
+@custom-variant dark (&:is(.dark *));
+
+/* === Kronos design tokens — Cyber-Brutalist (adapted from Prototipo/code.html) === */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --lime: #d4ff00;
+  --charcoal: #121212;
+  --charcoal-light: #1e1e1e;
+  --charcoal-lighter: #333333;
+
+  /* legacy brand token names kept so existing utility classes (text-kronos-*,
+     bg-gradient-brand, etc.) don't need touching everywhere — they now resolve
+     to the brutalist palette instead of the old blue/violet/magenta gradient. */
+  --kronos-blue: #d4ff00;
+  --kronos-violet: #ffffff;
+  --kronos-magenta: #d4ff00;
+
+  --ink: #ffffff;
+  --ink-soft: #cccccc;
+  --surface: #121212;
+  --surface-alt: #1e1e1e;
+  --gradient-brand: #d4ff00;
+
+  --font-display: var(--font-aqua), var(--font-nunito), sans-serif;
+  --font-body: var(--font-aqua), var(--font-nunito), sans-serif;
+  --font-data: var(--font-aqua), var(--font-nunito), sans-serif;
+
+  /* shadcn/ui variable mapping onto the Kronos palette */
+  --background: var(--surface);
+  --foreground: var(--ink);
+  --card: var(--surface-alt);
+  --card-foreground: var(--ink);
+  --popover: var(--surface-alt);
+  --popover-foreground: var(--ink);
+  --primary: var(--lime);
+  --primary-foreground: var(--charcoal);
+  --secondary: var(--surface-alt);
+  --secondary-foreground: var(--ink);
+  --muted: var(--surface-alt);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--surface-alt);
+  --accent-foreground: var(--ink);
+  --destructive: #ffb4ab;
+  --border: #333333;
+  --input: #333333;
+  --ring: var(--lime);
+  --radius: 0rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-kronos-blue: var(--kronos-blue);
+  --color-kronos-violet: var(--kronos-violet);
+  --color-kronos-magenta: var(--kronos-magenta);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+
+  --color-lime: var(--lime);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
+  --color-charcoal-lighter: var(--charcoal-lighter);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-data);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+    font-size: 24px;
+    overflow-x: hidden;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display uppercase font-extrabold;
+  }
+  ::selection {
+    background: var(--lime);
+    color: var(--charcoal);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes matrix-float {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+@keyframes particle-fly {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0);
+    opacity: 0;
+  }
+}
+
+@utility text-gradient-brand {
+  color: var(--lime);
+}
+
+@utility bg-gradient-brand {
+  background-color: var(--lime);
+}
+
+/* Neo-brutalist card/panel border: thick outline + hard offset shadow, no blur. */
+@utility brutal-border {
+  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0px var(--lime);
+}
+
+@utility brutal-border-lime {
+  border: 3px solid var(--lime);
+  box-shadow: 6px 6px 0px var(--ink);
+}
+
+@utility animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
