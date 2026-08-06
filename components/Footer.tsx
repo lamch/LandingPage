@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
 import { FOOTER_COLUMNS, SITE, NAV_LINKS } from "@/lib/constants";
-import BinaryClicker from "@/components/BinaryClicker";
+import Reveal from "@/components/Reveal";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,48 +8,19 @@ export default function Footer() {
   return (
     <footer className="border-t-8 border-lime bg-charcoal">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <Reveal className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-2">
+            <div className="group flex w-fit items-center gap-2">
               <img
                 src="/logo-icon.svg"
                 alt="ByteCodex Software Development"
                 width={32}
                 height={32}
-                className="h-8 w-8 object-contain"
+                className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
               />
               <span className="font-display text-base text-lime uppercase">BYTECODEX//DEV</span>
             </div>
             <p className="mt-3 max-w-xs font-mono text-sm text-ink-soft">{SITE.tagline}</p>
-            <div className="mt-5 flex gap-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="text-ink-soft transition-colors hover:text-lime"
-              >
-                <LinkedinIcon className="h-5 w-5" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="text-ink-soft transition-colors hover:text-lime"
-              >
-                <GithubIcon className="h-5 w-5" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="text-ink-soft transition-colors hover:text-lime"
-              >
-                <InstagramIcon className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           <div>
@@ -60,7 +30,7 @@ export default function Footer() {
                 <li key={item}>
                   <a
                     href="#servicios"
-                    className="font-mono text-sm text-ink-soft transition-colors hover:text-lime"
+                    className="font-mono text-sm text-ink-soft transition-all duration-200 hover:pl-1 hover:text-lime"
                   >
                     {item}
                   </a>
@@ -76,7 +46,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="font-mono text-sm text-ink-soft transition-colors hover:text-lime"
+                    className="font-mono text-sm text-ink-soft transition-all duration-200 hover:pl-1 hover:text-lime"
                   >
                     {link.label}
                   </a>
@@ -92,7 +62,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="font-mono text-sm text-ink-soft transition-colors hover:text-lime"
+                    className="font-mono text-sm text-ink-soft transition-all duration-200 hover:pl-1 hover:text-lime"
                   >
                     {item}
                   </Link>
@@ -102,18 +72,16 @@ export default function Footer() {
             <h3 className="mt-6 text-sm font-semibold text-ink">Contacto</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-ink-soft">
               <li>
-                <a href={`mailto:${SITE.email}`} className="font-mono hover:text-lime">
+                <a href={`mailto:${SITE.email}`} className="font-mono transition-colors hover:text-lime">
                   {SITE.email}
                 </a>
               </li>
               <li>{SITE.location}</li>
             </ul>
           </div>
-        </div>
+        </Reveal>
 
-        <BinaryClicker />
-
-        <div className="mt-6 border-t border-border pt-6 text-center text-xs text-ink-soft">
+        <div className="mt-14 border-t border-border pt-6 text-center text-xs text-ink-soft">
           © {year} ByteCodex Software Development
         </div>
       </div>

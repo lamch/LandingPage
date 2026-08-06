@@ -61,7 +61,7 @@ export default function Testimonios() {
               <ChevronLeft className="h-5 w-5" />
             </button>
 
-            <div className="flex gap-2">
+            <div className="flex items-center gap-2">
               {TESTIMONIOS.map((t, i) => (
                 <button
                   key={t.author}
@@ -71,8 +71,8 @@ export default function Testimonios() {
                     setDirection(i > index ? 1 : -1);
                     setIndex(i);
                   }}
-                  className={`h-2.5 w-2.5 transition-colors ${
-                    i === index ? "bg-lime" : "bg-charcoal-lighter"
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    i === index ? "w-6 bg-lime" : "w-2.5 bg-charcoal-lighter hover:bg-ink-soft"
                   }`}
                 />
               ))}

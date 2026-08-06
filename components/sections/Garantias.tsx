@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 import { GARANTIAS, ESTANDARES_CALIDAD } from "@/lib/constants";
 import Reveal, { RevealGroup, RevealItem } from "@/components/Reveal";
@@ -18,11 +21,13 @@ export default function Garantias() {
         <RevealGroup className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {GARANTIAS.map((g) => (
             <RevealItem key={g.title}>
-              <div className="flex h-full gap-4 border-2 border-charcoal-lighter bg-charcoal-light p-6 transition-colors hover:border-lime">
-                <ShieldCheck
-                  className="h-5 w-5 shrink-0 text-lime"
-                  strokeWidth={1.75}
-                />
+              <div className="group flex h-full gap-4 border-2 border-charcoal-lighter bg-charcoal-light p-6 transition-colors hover:border-lime">
+                <motion.div whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 300, damping: 10 }}>
+                  <ShieldCheck
+                    className="h-5 w-5 shrink-0 text-lime"
+                    strokeWidth={1.75}
+                  />
+                </motion.div>
                 <div>
                   <h3 className="font-display text-base text-ink">
                     {g.title}

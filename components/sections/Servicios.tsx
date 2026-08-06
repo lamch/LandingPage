@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
   Code2,
   BrainCircuit,
@@ -33,9 +34,13 @@ function ServicioCard({
   const Icon = ICONS[servicio.icon];
   return (
     <div className="group relative flex h-full flex-col border-2 border-charcoal-lighter bg-charcoal-light p-6 transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-lime hover:shadow-[6px_6px_0px_var(--lime)]">
-      <div className="flex h-11 w-11 items-center justify-center border-2 border-lime text-lime">
+      <motion.div
+        whileHover={{ rotate: -8, scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+        className="flex h-11 w-11 items-center justify-center border-2 border-lime text-lime"
+      >
         <Icon className="h-5.5 w-5.5" strokeWidth={1.75} />
-      </div>
+      </motion.div>
       <h3 className="mt-5 font-display text-lg text-ink">{servicio.title}</h3>
       <p className="mt-2 flex-1 font-mono text-sm leading-relaxed text-ink-soft">
         {servicio.description}

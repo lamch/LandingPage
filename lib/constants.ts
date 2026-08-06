@@ -33,7 +33,7 @@ export const HERO = {
     "Desarrollamos sistemas a medida, chatbots con IA y automatizaciones que eliminan el trabajo manual de tu empresa. Tú te enfocas en crecer; el código se encarga del resto.",
   ctaPrimary: "Cotiza tu proyecto gratis",
   ctaSecondary: "Ver cómo trabajamos ↓",
-  socialProof: "+40 proyectos entregados · 8 años de experiencia · Clientes en 4 países",
+  socialProof: "+40 proyectos entregados · 8 años de experiencia · Sistemas en producción en Bolivia",
 };
 
 export type Servicio = {
@@ -52,7 +52,7 @@ export const SERVICIOS: Servicio[] = [
   {
     title: "Inteligencia Artificial",
     description:
-      "Integramos IA en tus procesos: clasificación de documentos, análisis de datos, asistentes internos entrenados con tu información.",
+      "Integramos IA en tus procesos: OCR para cargar ventas y facturas desde una foto, clasificación de documentos, análisis de datos y asistentes internos entrenados con tu información.",
     icon: "BrainCircuit",
   },
   {
@@ -114,28 +114,22 @@ export const PROCESO = [
 
 export const CASOS_EXITO = [
   {
-    sector: "Transporte interdepartamental",
-    title: "Marketplace de boletos con reservas en tiempo real.",
-    metric: "−72%",
-    metricLabel: "en tiempo de venta por boleto",
-    quote: "Pasamos de planillas a un sistema que vende solo.",
-    image: "caso-transporte.webp",
-  },
-  {
-    sector: "Distribuidora de alimentos",
-    title: "Bot de WhatsApp que toma pedidos y los carga al ERP.",
-    metric: "+3.100",
-    metricLabel: "pedidos procesados sin intervención humana en 6 meses",
+    sector: "Retail / Comercio",
+    title: "Jawitas Siervo Fiel: ventas e inventario con chatbot y carga de ventas por foto (OCR).",
+    metric: "OCR + Chatbot",
+    metricLabel: "saca una foto del recibo y el sistema carga la venta solo; el chatbot atiende a los clientes",
     quote: "",
-    image: "caso-distribuidora.webp",
+    image: "",
+    link: "",
   },
   {
-    sector: "Estudio contable",
-    title: "Automatización de reportes regulatorios.",
-    metric: "40 horas/mes",
-    metricLabel: "recuperadas para el equipo",
-    quote: "Lo que hacíamos en una semana, ahora sale en una tarde.",
-    image: "caso-contable.webp",
+    sector: "E-commerce",
+    title: "BabyHouse: sistema de ventas e inventario con tienda en línea propia.",
+    metric: "Tienda en vivo",
+    metricLabel: "catálogo, carrito y checkout publicados en internet",
+    quote: "",
+    image: "",
+    link: "http://13.140.140.132:3000/",
   },
 ];
 
@@ -263,9 +257,9 @@ export const FAQ = [
       "Un chatbot o automatización: 2–4 semanas. Un sistema a medida: 2–4 meses según alcance. Siempre con fecha comprometida por contrato.",
   },
   {
-    question: "¿Trabajan solo en Bolivia?",
+    question: "¿Dónde trabajan?",
     answer:
-      "Nuestra base está en Bolivia, pero trabajamos de forma remota con clientes en toda Latinoamérica y España.",
+      "Estamos en La Paz, Bolivia, y trabajamos de forma presencial y remota con negocios en todo el país.",
   },
   {
     question: "¿Qué pasa si ya tengo un sistema antiguo?",

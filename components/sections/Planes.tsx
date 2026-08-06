@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { PLANES, PLANES_NOTA, waLink } from "@/lib/constants";
 import Reveal, { RevealGroup, RevealItem } from "@/components/Reveal";
@@ -28,9 +29,13 @@ export default function Planes() {
                 }`}
               >
                 {plan.highlighted && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 border-2 border-charcoal bg-lime px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest text-charcoal">
+                  <motion.span
+                    animate={{ y: [0, -3, 0] }}
+                    transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute -top-3 left-1/2 -translate-x-1/2 border-2 border-charcoal bg-lime px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest text-charcoal"
+                  >
                     Más elegido
-                  </span>
+                  </motion.span>
                 )}
 
                 <h3 className="font-display text-xl">{plan.name}</h3>

@@ -100,7 +100,6 @@
   }
   html {
     @apply font-sans scroll-smooth;
-    font-size: 24px;
     overflow-x: hidden;
   }
   body {
@@ -116,34 +115,6 @@
   ::selection {
     background: var(--lime);
     color: var(--charcoal);
-  }
-}
-
-@keyframes matrix-float {
-  0% {
-    top: -10%;
-    opacity: 0;
-  }
-  8% {
-    opacity: 1;
-  }
-  92% {
-    opacity: 1;
-  }
-  100% {
-    top: 110%;
-    opacity: 0;
-  }
-}
-
-@keyframes particle-fly {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0);
-    opacity: 0;
   }
 }
 

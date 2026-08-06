@@ -41,12 +41,13 @@ export default function WhatsAppFloat() {
               </motion.div>
             )}
           </AnimatePresence>
+          <span className="absolute inset-0 animate-ping rounded-full bg-[#25D366]/60" aria-hidden="true" />
           <a
             href={waLink()}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Abrir WhatsApp"
-            className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105"
+            className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105"
           >
             <MessageCircle className="h-7 w-7" fill="white" strokeWidth={0} />
           </a>

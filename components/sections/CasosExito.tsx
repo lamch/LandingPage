@@ -1,10 +1,10 @@
-import { Bus, Package, FileSpreadsheet } from "lucide-react";
+import { ScanLine, Store } from "lucide-react";
 import { CASOS_EXITO } from "@/lib/constants";
 import Reveal, { RevealGroup, RevealItem } from "@/components/Reveal";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import CountUp from "@/components/CountUp";
 
-const ICONS = [Bus, Package, FileSpreadsheet];
+const ICONS = [ScanLine, Store];
 
 export default function CasosExito() {
   return (
@@ -16,7 +16,7 @@ export default function CasosExito() {
           </h2>
         </Reveal>
 
-        <RevealGroup className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <RevealGroup className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {CASOS_EXITO.map((caso, i) => (
             <RevealItem key={caso.sector}>
               <div className="flex h-full flex-col overflow-hidden border-2 border-charcoal-lighter bg-charcoal-light transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-lime hover:shadow-[6px_6px_0px_var(--lime)]">
@@ -40,6 +40,16 @@ export default function CasosExito() {
                     <p className="mt-4 flex-1 border-t border-charcoal-lighter pt-4 font-mono text-sm italic leading-relaxed text-ink-soft">
                       &ldquo;{caso.quote}&rdquo;
                     </p>
+                  )}
+                  {caso.link && (
+                    <a
+                      href={caso.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex w-fit items-center gap-1 border-t border-charcoal-lighter pt-4 font-mono text-sm font-bold text-lime hover:underline"
+                    >
+                      Ver sitio en vivo →
+                    </a>
                   )}
                 </div>
               </div>

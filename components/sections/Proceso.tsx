@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { PROCESO } from "@/lib/constants";
 import Reveal, { RevealGroup, RevealItem } from "@/components/Reveal";
 
@@ -19,9 +22,13 @@ export default function Proceso() {
           {PROCESO.map((paso) => (
             <RevealItem key={paso.step} className="relative">
               <div className="flex items-center gap-4 md:block">
-                <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center border-2 border-charcoal bg-lime font-display text-lg text-charcoal">
+                <motion.div
+                  whileHover={{ scale: 1.12, rotate: -4 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                  className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center border-2 border-charcoal bg-lime font-display text-lg text-charcoal"
+                >
                   {paso.step}
-                </div>
+                </motion.div>
                 <div className="md:mt-5">
                   <h3 className="font-display text-base text-ink">
                     {paso.title}

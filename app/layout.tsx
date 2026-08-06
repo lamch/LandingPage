@@ -71,7 +71,7 @@ const jsonLd = {
   logo: `${SITE.url}/logo-icon.png`,
   description:
     "Empresa boliviana de desarrollo de software: sistemas a medida, IA, chatbots automatizados, automatización de procesos y hosting.",
-  areaServed: ["BO", "Latinoamérica"],
+  areaServed: "BO",
   address: {
     "@type": "PostalAddress",
     addressLocality: "La Paz",
@@ -81,7 +81,7 @@ const jsonLd = {
     "@type": "ContactPoint",
     email: SITE.email,
     contactType: "sales",
-    areaServed: ["BO", "LATAM"],
+    areaServed: "BO",
     availableLanguage: ["es"],
   },
   makesOffer: [
